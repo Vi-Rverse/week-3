@@ -1,5 +1,5 @@
 #improved design using function
-get_votes <- function(repeated_char = "Enter votes for", prompt) {
+get_votes <- function(repeated_char = "Enter votes for", prompt= "Unknown Candidate: ") {
 votes <- as.integer(readline(paste(repeated_char, prompt)))
 }
 mario <- get_votes(prompt= "Mario: ")
