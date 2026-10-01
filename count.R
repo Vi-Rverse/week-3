@@ -1,11 +1,7 @@
 # using conditionals to flag invalid input
 get_votes <- function(repeated_char = "Enter votes for", prompt = "Unknown Candidate: ") {
     votes <- suppressWarnings(as.integer(readline(paste(repeated_char, prompt))))
-    if(is.na(votes)) {
-        return(0)
-    } else {
-        return(votes)
-    }
+    ifelse(is.na(votes), 0, votes)
 }
 mario <- get_votes(prompt = "Mario: ")
 peach <- get_votes(prompt = "Peach: ")
