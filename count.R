@@ -1,12 +1,10 @@
-#week 1
-mario <- as.integer(readline("Enter votes for Mario: "))
-peach <- as.integer(readline("Enter votes for Peach: "))
-bowser <- as.integer(readline("Enter votes for Bowser: "))
-
-total <- sum(mario, peach, bowser)
-
-#print(paste("Total votes:", total))
-cat("Total votes:", total)
-
-
-#improved design
+#improved design using function
+get_votes <- function(repeated_char = "Enter votes for ", prompt) {
+votes <- as.integer(readline(paste(repeated_char, prompt)))
+return(votes)
+}
+mario <- get_votes(prompt= "Mario: ")
+peach <- get_votes(prompt = "Peach: ")
+bowser <- get_votes(prompt = "Bowser: ")
+total_votes <- sum(mario, peach, bowser)
+cat("Total votes are: ", total_votes)
