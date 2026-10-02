@@ -6,5 +6,9 @@ get_votes <- function(repeated_char = "Enter votes for", prompt = "Unknown Candi
 mario <- get_votes(prompt = "Mario: ")
 peach <- get_votes(prompt = "Peach: ")
 bowser <- get_votes(prompt = "Bowser: ")
-total_votes <- sum(mario, peach, bowser)
+user <- get_votes()
+total_votes <- sum(mario, peach, bowser, user)
 cat("Total votes are:", total_votes)
+
+#its not imp to store votes unless you want to use it later like we did in line 4
+
